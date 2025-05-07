@@ -31,11 +31,13 @@ echo "export AIRCHAIN_PORT="19"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-# download binary
+**download binary**
+```
 cd $HOME
 wget -O junctiond https://github.com/airchains-network/junction/releases/download/v0.3.1/junctiond-linux-amd64
 chmod +x junctiond
 mv junctiond $HOME/go/bin/
+```
 
 # config and init app
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
