@@ -39,11 +39,13 @@ chmod +x junctiond
 mv junctiond $HOME/go/bin/
 ```
 
-# config and init app
+**config and init app**
+```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 source $HOME/.cargo/env
 junctiond init $MONIKER --chain-id $CHAIN_ID 
 sed -i -e "s|^node *=.*|node = \"tcp://localhost:${AIRCHAIN_PORT}657\"|" $HOME/.junctiond/config/client.toml
+```
 
 # download genesis and addrbook
 wget -O $HOME/.junctiond/config/genesis.json https://server-3.itrocket.net/testnet/airchains/genesis.json
