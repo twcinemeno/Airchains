@@ -47,9 +47,11 @@ junctiond init $MONIKER --chain-id $CHAIN_ID
 sed -i -e "s|^node *=.*|node = \"tcp://localhost:${AIRCHAIN_PORT}657\"|" $HOME/.junctiond/config/client.toml
 ```
 
-# download genesis and addrbook
+**download genesis and addrbook**
+```
 wget -O $HOME/.junctiond/config/genesis.json https://server-3.itrocket.net/testnet/airchains/genesis.json
 wget -O $HOME/.junctiond/config/addrbook.json  https://server-3.itrocket.net/testnet/airchains/addrbook.json
+```
 
 # set seeds and peers
 SEEDS="97cadd453fa35cee05f72611fdb15a49112575cb@airchains-testnet-seed.itrocket.net:19656"
