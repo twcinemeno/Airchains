@@ -96,7 +96,8 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.junctiond/config/conf
 sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.junctiond/config/config.toml
 ```
 
-# create service file
+**create service file**
+```
 sudo tee /etc/systemd/system/junctiond.service > /dev/null <<EOF
 [Unit]
 Description=Airchains node
@@ -111,6 +112,7 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
+```
 
 # reset and download snapshot
 junctiond tendermint unsafe-reset-all --home $HOME/.junctiond
