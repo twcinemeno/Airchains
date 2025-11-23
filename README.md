@@ -249,3 +249,5 @@ sudo rm -rf $HOME/.junctiond
 sed -i "/AIRCHAIN_/d" $HOME/.bash_profile
 
 test push
+
+test push
